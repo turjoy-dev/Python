@@ -1,0 +1,47 @@
+li = [9,2,7,4,5,70,8,12,11]
+s_li = sorted(li)
+print('Variable :\t',li)
+print('Variable :',s_li)
+li.sort()
+print('Variable :',li)
+
+
+tup = (9,2,7,4,5,70,8,12,11)
+tup_sort = sorted(tup)
+print('Vari-',tup_sort)
+print('Vari-\t',tup_sort)
+
+li = [2,5,3,90,16,11,87,88,35]
+S_li = sorted(li, reverse=True)
+print('Sorted variable -', S_li)
+
+
+li = [2,5,-3,90,-16,11,-87,88,35]
+S_li = sorted(li, key=abs)
+print('Absoulate value : ',S_li)
+
+li = [-6,-5,-4,2,4,9]
+S_li = sorted(li, key=abs)
+print('Absoulate value : ',S_li)
+
+class Employee():
+    def __init__(self,age,name,salary,job):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.job = job
+    def __repr__(self):
+        return'({},{},${},{})'.format(self.name,self.age,self.salary,self.job)
+    
+e1 = Employee('Muraf',36,50000,'Marketing')
+e2 = Employee('jolly',32,45000,'Distribution')
+e3 = Employee('Arman',40,55000,'Finance')
+
+employees = [e1,e2,e3]
+
+def e_sort(employ):
+    return employ.salary, employ.age
+
+s_employees = sorted(employees, key = e_sort)
+    
+print(s_employees)
