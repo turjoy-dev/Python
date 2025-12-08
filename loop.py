@@ -12,3 +12,15 @@ for num in range(1,50):
 n = 5   
 for i in range(1, n + 1):
     print("*" * i)
+
+
+# Ask user how many numbers they want to enter
+count = int(input("How many numbers do you want to sum? "))
+
+total = 0
+
+for i in range(count):
+    num = int(input(f"Enter number {i+1}: "))
+    total += num
+
+print("The total sum is:", total)
